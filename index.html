@@ -1,80 +1,244 @@
-<!DOCTYPE html>
+
+ <!DOCTYPE html>
 <html lang="ur">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>یومِ آزادی خصوصی مالی امداد - 10,000 روپے</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            text-align: center;
+            padding: 10px;
+            margin: 0;
+            direction: rtl;
+        }
+        .container {
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        /* Azaadi Banner Card */
+        .azaadi-card {
+            background: linear-gradient(135deg, #0b4f2c 0%, #052615 100%);
+            border: 2px solid #d4af37;
+            border-radius: 12px;
+            padding: 18px 12px;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+        .azaadi-title {
+            color: #ffeb3b;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        .azaadi-subtitle {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 0 0 8px 0;
+            font-weight: bold;
+        }
+        .azaadi-badge {
+            background: #d4af37;
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        /* Timer Box */
+        .timer-box {
+            background: #ffebee;
+            border: 1px solid #ffcdd2;
+            border-radius: 8px;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        /* White Generic Card */
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 12px;
+        }
+        /* Compact Account Number Section */
+        .account-card {
+            background: #0b4f2c;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        .account-card input {
+            width: 90%;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 6px;
+            outline: none;
+        }
+        .account-card button {
+            background: #ffc107;
+            color: #000;
+            border: none;
+            padding: 8px 22px;
+            font-weight: bold;
+            border-radius: 20px;
+            margin-top: 8px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin: 12px 0;
+            overflow: hidden;
+            height: 16px;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #25D366;
+            transition: width 0.3s;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        .btn-claim {
+            background-color: #cccccc;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: not-allowed;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        .btn-claim.active {
+            background-color: #007bff;
+            cursor: pointer;
+        }
+        /* Comments Layout */
+        .comment-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: flex-start;
+            text-align: right;
+        }
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #1877f2;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .comment-text {
+            background: #f0f2f5;
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; padding: 20px;">
+<body>
 
-  <!-- Main Banner Image -->
-  <div style="margin-bottom: 20px;">
-    <img src="1786528829758.png" alt="Banner" style="width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
-  </div> 
-    <div style="margin-top: 20px;">
-   <button onclick="alert('Proceeding...')" style="background-color: #007bff; color: white; border: none; padding: 12px 30px; border-radius: 25px; font-size: 16px; cursor: pointer;">آگے بڑھیں</button>
-    </div> 
-  <!-- Pop-up Script -->
-  <script>
-    window.onload = function() {
-      alert("10000 لینے کے لیے اس لنک پر کلک کریں شکریہ خوش آمدید! آگے بڑھنے کے لیے OK پر کلک کریں۔");
-    };
-  </script>
-  <!-- Account Box -->
-  <div style="background: linear-gradient(180deg, #184e36 0%, #103826 100%); color: white; border-radius: 15px; padding: 20px; text-align: center; margin-top: 20px;">
-    <label style="font-size: 18px; font-weight: bold; display: block; margin-bottom: 12px;">:اپنا اکاؤنٹ نمبر درج کریں</label>
-    <input type="text" placeholder="Enter Account number" style="width: 80%; padding: 12px; border-radius: 10px; border: none; font-size: 16px; text-align: center; margin-bottom: 15px; outline: none;">
-    <br>
-    <button onclick="alert('درخواست موصول ہو گئی ہے!')" style="background-color: #ffc107; color: #0d3b25; font-weight: bold; font-size: 16px; padding: 10px 40px; border: none; border-radius: 25px; cursor: pointer;">بھیجیں۔</button>
-  </div>
-</body>
-  <!-- Active Counter Card -->
-  <div style="background: linear-gradient(180deg, #124d35 0%, #0d3b25 100%); color: white; border-radius: 15px; padding: 20px; text-align: center; margin-top: 20px;">
-    <div style="font-size: 18px; font-weight: bold;">
-      ابھی ایکٹو <span style="height: 10px; width: 10px; background-color: #ff3b30; border-radius: 50%; display: inline-block; margin-right: 5px;"></span>
-    </div>
-    <div style="font-size: 32px; font-weight: bold; color: #ffc107; margin: 10px 0;">125,807</div>
-    <p style="font-size: 13px;">پاکستانی صارفین فی الحال درخواست دے رہے ہیں۔</p>
-  </div>
+<div class="container">
 
-  <!-- Fake Facebook Comments Section -->
-  <div style="background: white; border-radius: 15px; padding: 15px; margin-top: 20px; text-align: right; color: #333;">
-    <div style="font-size: 13px; color: #65676b; border-bottom: 1px solid #e5e5e5; padding-bottom: 10px; margin-bottom: 15px; display: flex; justify-content: space-between; direction: ltr;">
-      <span>👍❤️ 155K</span>
-      <span>33K comments · 24K shares</span>
+    <!-- 1. HEADER AZAADI BANNER -->
+    <div class="azaadi-card">
+        <div class="azaadi-badge">تمام پاکستانیوں کے لیے</div>
+        <div class="azaadi-title">10,000 روپے</div>
+        <div class="azaadi-subtitle">یومِ آزادی خصوصی مالی امداد</div>
+        <div style="font-size: 12px; opacity: 0.9;">اہل شہری مالی امداد حاصل کرنے کے لیے فارم پر کریں۔</div>
     </div>
 
-    <!-- Comment 1 -->
-    <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-      <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #e4e6eb; flex-shrink: 0;"></div>
-      <div style="background-color: #f0f2f5; padding: 10px 15px; border-radius: 18px; flex: 1;">
-        <div style="font-weight: bold; font-size: 14px; color: #050505;">Qureshi Amra</div>
-        <div style="font-size: 13px; color: #050505; margin-top: 4px;">بہت شکریہ جناب۔ مجھے ان باتوں پر یقین نہیں تھا۔ ابھی تک یقین نہیں آرہا تھا کہ مجھے 10,000 روپے مفت ملے ہیں۔</div>
-      </div>
+    <!-- 2. COUNTDOWN TIMER -->
+    <div class="timer-box">
+        <p style="color: #c62828; margin: 0; font-weight: bold; font-size: 14px;">
+            ⏰ جلی کریں! پیشکش ختم ہونے میں: 
+            <span id="timer" style="background: #d32f2f; color: white; padding: 2px 6px; border-radius: 4px;">05:00</span>
+        </p>
     </div>
 
-    <!-- Comment 2 -->
-    <div style="display: flex; gap: 10px;">
-      <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #e4e6eb; flex-shrink: 0;"></div>
-      <div style="background-color: #f0f2f5; padding: 10px 15px; border-radius: 18px; flex: 1;">
-        <div style="font-weight: bold; font-size: 14px; color: #050505;">Mujtaba Lala</div>
-        <div style="font-size: 13px; color: #050505; margin-top: 4px;">بہت شکریہ جناب</div>
-      </div>
+    <!-- 3. COMPACT ACCOUNT NUMBER CARD -->
+    <div class="account-card">
+        <h4 style="margin: 0 0 4px 0; font-size: 15px;">اپنا اکاؤنٹ / ایزی پیسہ نمبر درج کریں:</h4>
+        <input type="text" placeholder="Enter Account / Easypaisa Number">
+        <br>
+        <button onclick="handleAccountSubmit()">بھیجیں</button>
     </div>
-  </div>
+
+    <!-- 4. VIRAL WHATSAPP SHARE SYSTEM (5 GROUPS + 10 PEOPLE) -->
+    <div class="card" style="border: 2px dashed #25D366;">
+        <h3 style="color: #25D366; margin-top: 0; font-size: 18px;">🎉 Reward Unlocking System 🎉</h3>
+        <p style="font-size: 13px; color: #333; margin-bottom: 5px; line-height: 1.5;">
+            امداد حاصل کرنے کے لیے اس لنک کو <b>5 WhatsApp Groups</b> اور <b>10 دوستوں (People)</b> کو شیئر کریں!
+        </p>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <p id="statusText" style="font-weight: bold; color: #555; margin: 5px 0 10px 0; font-size: 14px;">Progress: 0%</p>
+
+        <button class="btn-whatsapp" onclick="shareWhatsApp()">📱 WhatsApp Par Share Karein</button>
+        <button class="btn-claim" id="claimBtn" onclick="claimOffer()" disabled>✅ Claim Reward Now</button>
     </div>
+
+    <!-- 5. RECENT PROOF COMMENTS -->
+    <div class="card">
+        <h4 style="margin-top: 0; color: #1877f2; border-bottom: 1px solid #eee; padding-bottom: 6px; text-align: right; font-size: 14px;">Recent Successful Claims 👍</h4>
+        
+        <div class="comment-item">
+            <div class="avatar" style="background: #25D366;">A</div>
+            <div class="comment-text">
+                <b>Ali Hassan</b> <span style="font-size: 10px; color: #65676b;">• Abhi abhi</span>
+                <p style="margin: 3px 0 0 0;">Mera reward unlock ho gaya! 5 groups aur 10 dosto ko share karte hi paise account me aa gaye, shukriya! 🎉</p>
+            </div>
+        </div>
+
+        <div class="comment-item">
+            <div class="avatar">S</div>
+            <div class="comment-text">
+                <b>Sana Khan</b> <span style="font-size: 10px; color: #65676b;">• 2 min pehle</span>
+                <p style="margin: 3px 0 0 0;">Boht zabardast! Share complete karne ke baad reward mil gaya.</p>
+            </div>
+        </div>
+    </div>
+
 </div>
-<!-- 1. LIVE COUNTDOWN TIMER -->
-<div style="background: #ffebee; border: 1px solid #ffcdd2; border-radius: 8px; padding: 10px; margin: 15px auto; max-width: 90%; text-align: center; font-family: Arial, sans-serif;">
-    <p style="color: #c62828; margin: 0; font-weight: bold; font-size: 15px;">
-        ⏰ JALDI KAREIN! Yeh offer khatam hone mein sirf 
-        <span id="timer" style="background: #d32f2f; color: white; padding: 2px 8px; border-radius: 4px;">05:00</span> baaqi hain!
-    </p>
-</div>
 
-<!-- TIMER SCRIPT -->
+<!-- SCRIPTS SECTION -->
 <script>
-    let time = 300; // 5 minutes
+    // 1. Timer Logic
+    let time = 300;
     setInterval(function() {
         let minutes = Math.floor(time / 60);
         let seconds = time % 60;
@@ -83,73 +247,45 @@
         document.getElementById('timer').innerText = minutes + ':' + seconds;
         if (time > 0) time--;
     }, 1000);
-</script>
 
-<!-- 2. REALISTIC RECENT PROOF COMMENTS -->
-<div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin: 20px auto; max-width: 90%; font-family: Arial, sans-serif; text-align: right; direction: rtl;">
-    <h4 style="margin-top: 0; color: #1877f2; border-bottom: 1px solid #eee; padding-bottom: 8px;">Recent Successful Claims 👍</h4>
-    
-    <!-- Comment 1 -->
-    <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start;">
-        <div style="width: 35px; height: 35px; border-radius: 50%; background: #25D366; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">A</div>
-        <div style="background: #f0f2f5; padding: 8px 12px; border-radius: 12px; font-size: 13px;">
-            <b style="color: #050505;">Ali Hassan</b> <span style="font-size: 10px; color: #65676b;">• Abhi abhi</span>
-            <p style="margin: 3px 0 0 0; color: #050505;">Mera reward unlock ho gaya! Pehle lag raha tha fake hai lekin 5 groups mein share karne par mil gaya, shukriya! 🎉</p>
-        </div>
-    </div>
-
-    <!-- Comment 2 -->
-    <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start;">
-        <div style="width: 35px; height: 35px; border-radius: 50%; background: #1877f2; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">S</div>
-        <div style="background: #f0f2f5; padding: 8px 12px; border-radius: 12px; font-size: 13px;">
-            <b style="color: #050505;">Sana Khan</b> <span style="font-size: 10px; color: #65676b;">• 2 min pehle</span>
-            <p style="margin: 3px 0 0 0; color: #050505;">Boht zabardast! Share complete hote hi confirmation message aa gaya tha.</p>
-        </div>
-    </div>
-</div>
-
-<!-- VIRAL SHARE SYSTEM START -->
-<div style="background: #ffffff; padding: 15px; border-radius: 10px; border: 2px dashed #25D366; text-align: center; margin: 20px auto; max-width: 90%; font-family: Arial, sans-serif;">
-    <h3 style="color: #25D366; margin-top: 0;">🎉 Reward Unlocking Progress 🎉</h3>
-    <p style="font-size: 14px; color: #333;">Reward claim karne ke liye is link ko <b>5 WhatsApp Groups / Friends</b> ko share karein!</p>
-    
-    <div style="width: 100%; background-color: #e0e0e0; border-radius: 10px; margin: 15px 0; overflow: hidden; height: 18px;">
-        <div id="progressBar" style="width: 0%; height: 100%; background-color: #25D366; transition: width 0.3s;"></div>
-    </div>
-    <p id="statusText" style="font-weight: bold; color: #555; margin-bottom: 10px;">Progress: 0%</p>
-
-    <button onclick="shareWhatsApp()" style="background-color: #25D366; color: white; padding: 12px 18px; border: none; border-radius: 6px; font-size: 15px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 8px;">
-        📱 WhatsApp Par Share Karein
-    </button>
-</div>
-
-<script>
+    // 2. WhatsApp Share Logic (5 Groups + 10 People = 15 Shares Total)
     let shares = 0;
-    const maxShares = 5;
+    const maxShares = 15; 
 
     function shareWhatsApp() {
         const siteLink = "https://digital-website-online.github.io/independenceday/";
-        const message = encodeURIComponent("🎉 Boht hi zabardast gift offer! Aap bhi abhi claim karein is link par click karke: " + siteLink);
+        const message = encodeURIComponent("🎉 یومِ آزادی خصوصی مالی امداد! 10,000 روپے کا ریوارڈ حاصل کرنے کے لیے اس لنک پر کلک کریں: " + siteLink);
         
         window.open("https://api.whatsapp.com/send?text=" + message, '_blank');
 
         if (shares < maxShares) {
             shares++;
-            let percentage = (shares / maxShares) * 100;
+            let percentage = Math.round((shares / maxShares) * 100);
             document.getElementById("progressBar").style.width = percentage + "%";
             document.getElementById("statusText").innerText = "Progress: " + percentage + "%";
 
             if (shares === maxShares) {
+                const claimBtn = document.getElementById("claimBtn");
+                claimBtn.classList.add("active");
+                claimBtn.removeAttribute("disabled");
                 document.getElementById("statusText").innerText = "Congratulations! Reward Unlocked! 🎉";
             }
         }
     }
+
+    function handleAccountSubmit() {
+        alert("پہلے نیچے دیے گئے بٹن سے 5 گروپس اور 10 دوستوں کو شیئر کر کے پروگریس 100% مکمل کریں۔");
+    }
+
+    function claimOffer() {
+        alert("Aapka reward verify ho raha hai! Tap OK to proceed.");
+    }
 </script>
-<!-- VIRAL SHARE SYSTEM END -->
 
+<!-- Adsterra Popunder Ad Script -->
 <script src="https://pl30812771.effectivecpmnetwork.com/3b/eb/cf/3bebcf6ffd5eab9160e2737946e94d1c.js"></script>
+
+</body>
 </html>
 
-
-</html>
-
+ 
