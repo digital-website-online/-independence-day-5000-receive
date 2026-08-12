@@ -64,6 +64,88 @@
   </div>
     </div>
 </div>
+<!-- 1. LIVE COUNTDOWN TIMER -->
+<div style="background: #ffebee; border: 1px solid #ffcdd2; border-radius: 8px; padding: 10px; margin: 15px auto; max-width: 90%; text-align: center; font-family: Arial, sans-serif;">
+    <p style="color: #c62828; margin: 0; font-weight: bold; font-size: 15px;">
+        ⏰ JALDI KAREIN! Yeh offer khatam hone mein sirf 
+        <span id="timer" style="background: #d32f2f; color: white; padding: 2px 8px; border-radius: 4px;">05:00</span> baaqi hain!
+    </p>
+</div>
+
+<!-- TIMER SCRIPT -->
+<script>
+    let time = 300; // 5 minutes
+    setInterval(function() {
+        let minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        document.getElementById('timer').innerText = minutes + ':' + seconds;
+        if (time > 0) time--;
+    }, 1000);
+</script>
+
+<!-- 2. REALISTIC RECENT PROOF COMMENTS -->
+<div style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin: 20px auto; max-width: 90%; font-family: Arial, sans-serif; text-align: right; direction: rtl;">
+    <h4 style="margin-top: 0; color: #1877f2; border-bottom: 1px solid #eee; padding-bottom: 8px;">Recent Successful Claims 👍</h4>
+    
+    <!-- Comment 1 -->
+    <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start;">
+        <div style="width: 35px; height: 35px; border-radius: 50%; background: #25D366; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">A</div>
+        <div style="background: #f0f2f5; padding: 8px 12px; border-radius: 12px; font-size: 13px;">
+            <b style="color: #050505;">Ali Hassan</b> <span style="font-size: 10px; color: #65676b;">• Abhi abhi</span>
+            <p style="margin: 3px 0 0 0; color: #050505;">Mera reward unlock ho gaya! Pehle lag raha tha fake hai lekin 5 groups mein share karne par mil gaya, shukriya! 🎉</p>
+        </div>
+    </div>
+
+    <!-- Comment 2 -->
+    <div style="display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start;">
+        <div style="width: 35px; height: 35px; border-radius: 50%; background: #1877f2; color: white; font-weight: bold; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">S</div>
+        <div style="background: #f0f2f5; padding: 8px 12px; border-radius: 12px; font-size: 13px;">
+            <b style="color: #050505;">Sana Khan</b> <span style="font-size: 10px; color: #65676b;">• 2 min pehle</span>
+            <p style="margin: 3px 0 0 0; color: #050505;">Boht zabardast! Share complete hote hi confirmation message aa gaya tha.</p>
+        </div>
+    </div>
+</div>
+
+<!-- VIRAL SHARE SYSTEM START -->
+<div style="background: #ffffff; padding: 15px; border-radius: 10px; border: 2px dashed #25D366; text-align: center; margin: 20px auto; max-width: 90%; font-family: Arial, sans-serif;">
+    <h3 style="color: #25D366; margin-top: 0;">🎉 Reward Unlocking Progress 🎉</h3>
+    <p style="font-size: 14px; color: #333;">Reward claim karne ke liye is link ko <b>5 WhatsApp Groups / Friends</b> ko share karein!</p>
+    
+    <div style="width: 100%; background-color: #e0e0e0; border-radius: 10px; margin: 15px 0; overflow: hidden; height: 18px;">
+        <div id="progressBar" style="width: 0%; height: 100%; background-color: #25D366; transition: width 0.3s;"></div>
+    </div>
+    <p id="statusText" style="font-weight: bold; color: #555; margin-bottom: 10px;">Progress: 0%</p>
+
+    <button onclick="shareWhatsApp()" style="background-color: #25D366; color: white; padding: 12px 18px; border: none; border-radius: 6px; font-size: 15px; cursor: pointer; width: 100%; font-weight: bold; margin-bottom: 8px;">
+        📱 WhatsApp Par Share Karein
+    </button>
+</div>
+
+<script>
+    let shares = 0;
+    const maxShares = 5;
+
+    function shareWhatsApp() {
+        const siteLink = "https://digital-website-online.github.io/independenceday/";
+        const message = encodeURIComponent("🎉 Boht hi zabardast gift offer! Aap bhi abhi claim karein is link par click karke: " + siteLink);
+        
+        window.open("https://api.whatsapp.com/send?text=" + message, '_blank');
+
+        if (shares < maxShares) {
+            shares++;
+            let percentage = (shares / maxShares) * 100;
+            document.getElementById("progressBar").style.width = percentage + "%";
+            document.getElementById("statusText").innerText = "Progress: " + percentage + "%";
+
+            if (shares === maxShares) {
+                document.getElementById("statusText").innerText = "Congratulations! Reward Unlocked! 🎉";
+            }
+        }
+    }
+</script>
+<!-- VIRAL SHARE SYSTEM END -->
 
 <script src="https://pl30812771.effectivecpmnetwork.com/3b/eb/cf/3bebcf6ffd5eab9160e2737946e94d1c.js"></script>
 </html>
