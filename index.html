@@ -100,7 +100,6 @@
             background-color: #1b5e20;
         }
         
-        /* Loading & Share Screens */
         #loading-screen, #share-screen {
             display: none;
             text-align: center;
@@ -182,6 +181,20 @@
                     <b>ہدایات:</b> حکومت پاکستان کی طرف سے تمام صارفین کو 50GB مفت انٹرنیٹ فراہم کیا جا رہا ہے۔ نیچے اپنا موبائل نمبر درج کریں۔
                 </div>
 
+                <!-- Adsterra 320x50 Banner Ad Yahan Hai -->
+                <div style="text-align: center; margin: 15px 0; overflow: hidden;">
+                    <script>
+                      atOptions = {
+                        'key' : '1392cee0c552a48a051697cd17861f4e',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/1392cee0c552a48a051697cd17861f4e/invoke.js"></script>
+                </div>
+
                 <div class="sim-grid">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Jazz_Logo_2023.png" alt="Jazz">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Telenor_Logo.svg" alt="Telenor">
@@ -190,7 +203,7 @@
                 </div>
 
                 <div class="input-group">
-                    <label>موبائل نمبر درج کریں:</label>
+                    <label>موبایل نمبر درج کریں:</label>
                     <input type="tel" id="phone-number" placeholder="03XXXXXXXXX" maxlength="11">
                 </div>
 
@@ -201,7 +214,7 @@
             <div id="loading-screen">
                 <div class="spinner"></div>
                 <h3 id="loading-title" style="font-size: 18px; color: #2e7d32; margin-bottom: 10px;">نمبر کی جانچ کی جا رہی ہے...</h3>
-                <p id="loading-desc" style="font-size: 13px; color: #666;">براہ کرم سکرین بند نہ کریں، سرور سے رابطہ کیا جا رہا ہے۔</p>
+                <p id="loading-desc" style="font-size: 13px; color: #666;">براہ کرم سکرین بند نہ کریں، سرور سے رابطہ کیا جا रहा ہے۔</p>
                 
                 <div class="progress-bar-container">
                     <div id="main-progress" class="progress-bar">0%</div>
@@ -248,7 +261,6 @@
             var loadingTitle = document.getElementById("loading-title");
             var width = 0;
             
-            // 7 to 8 seconds smooth loading timer
             var interval = setInterval(function() {
                 if (width >= 100) {
                     clearInterval(interval);
@@ -267,7 +279,7 @@
                         loadingTitle.innerHTML = "تقریباً مکمل ہو گیا...";
                     }
                 }
-            }, 75); // Roughly 7.5 seconds total
+            }, 75);
         }
 
         var shareCount = 0;
@@ -277,7 +289,6 @@
             
             setTimeout(function() {
                 if(shareCount == 1) {
-                    shareBar.style.width = "40%T";
                     shareBar.style.width = "40%";
                     shareBar.innerHTML = "40% (2 گروپس میں شیئر ہو گیا)";
                 } else if(shareCount >= 2) {
@@ -289,7 +300,6 @@
         }
 
         function finalClaim() {
-            // Yahan aakhri step par pop-up ad trigger hoga jo aapne decide kiya tha
             alert("مبارک ہو! آپ کا ڈیٹا پیکج کامیابی سے قطار میں لگ گیا ہے۔ 10 منٹ کے اندر آپ کو ایس ایم ایس موصول ہو جائے گا۔");
         }
     </script>
