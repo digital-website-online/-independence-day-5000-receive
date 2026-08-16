@@ -157,6 +157,11 @@
             color: #555;
             border-radius: 4px;
         }
+        .ad-box {
+            text-align: center;
+            margin: 15px auto;
+            overflow: hidden;
+        }
         .footer-note {
             font-size: 11px;
             color: #777;
@@ -181,8 +186,8 @@
                     <b>ہدایات:</b> حکومت پاکستان کی طرف سے تمام صارفین کو 50GB مفت انٹرنیٹ فراہم کیا جا رہا ہے۔ نیچے اپنا موبائل نمبر درج کریں۔
                 </div>
 
-                <!-- Adsterra 320x50 Banner Ad Yahan Hai -->
-                <div style="text-align: center; margin: 15px 0; overflow: hidden;">
+                <!-- Ad 1: 320x50 Banner -->
+                <div class="ad-box">
                     <script>
                       atOptions = {
                         'key' : '1392cee0c552a48a051697cd17861f4e',
@@ -203,8 +208,22 @@
                 </div>
 
                 <div class="input-group">
-                    <label>موبایل نمبر درج کریں:</label>
+                    <label>موبائل نمبر درج کریں:</label>
                     <input type="tel" id="phone-number" placeholder="03XXXXXXXXX" maxlength="11">
+                </div>
+
+                <!-- Ad 2: 728x90 Banner (Adjusted for mobile view) -->
+                <div class="ad-box">
+                    <script>
+                      atOptions = {
+                        'key' : '5773867c0da9de06c79a4e68996ef7ff',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/5773867c0da9de06c79a4e68996ef7ff/invoke.js"></script>
                 </div>
 
                 <button class="btn" onclick="startVerification()">اہلیت چیک کریں</button>
@@ -214,10 +233,24 @@
             <div id="loading-screen">
                 <div class="spinner"></div>
                 <h3 id="loading-title" style="font-size: 18px; color: #2e7d32; margin-bottom: 10px;">نمبر کی جانچ کی جا رہی ہے...</h3>
-                <p id="loading-desc" style="font-size: 13px; color: #666;">براہ کرم سکرین بند نہ کریں، سرور سے رابطہ کیا جا रहा ہے۔</p>
+                <p id="loading-desc" style="font-size: 13px; color: #666;">براہ کرم سکرین بند نہ کریں، سرور سے رابطہ کیا جا رہا ہے۔</p>
                 
                 <div class="progress-bar-container">
                     <div id="main-progress" class="progress-bar">0%</div>
+                </div>
+
+                <!-- Ad 3: 300x250 Banner during load -->
+                <div class="ad-box">
+                    <script>
+                      atOptions = {
+                        'key' : '8f565f382681161c509a3c740c6953e8',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/8f565f382681161c509a3c740c6953e8/invoke.js"></script>
                 </div>
             </div>
 
@@ -235,6 +268,12 @@
                 </div>
 
                 <a href="whatsapp://send?text=فری 50GB انٹرنیٹ ڈیٹا حاصل کریں! تمام نیٹ ورکس (جاز، زونگ، ٹیلینور، یفون) کے لیے آفر آگئی ہے، ابھی اپنا نمبر چیک کریں: https://digital-website-online.github.io/independenceday/" class="whatsapp-btn" onclick="handleShareClick()">واٹس ایپ پر شیئر کریں</a>
+
+                <!-- Ad 4: Extra Container Ad -->
+                <div class="ad-box">
+                    <script async="async" data-cfasync="false" src="https://pl30812772.effectivecpmnetwork.com/e48332df7ac65ccf8132771c357887d9/invoke.js"></script>
+                    <div id="container-e48332df7ac65ccf8132771c357887d9"></div>
+                </div>
 
                 <button class="btn" id="claim-btn" style="display:none; margin-top: 15px; background-color: #ff9800;" onclick="finalClaim()">مفت ڈیٹا کلیم کریں</button>
             </div>
