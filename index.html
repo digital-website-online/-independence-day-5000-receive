@@ -1,347 +1,540 @@
 <!DOCTYPE html>
 <html lang="ur" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pakistan Telecommunication Authority - Free Internet Scheme 2026</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #eef2f7;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            width: 100%;
-            max-width: 480px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            margin: 15px;
-        }
-        .header {
-            background: linear-gradient(135deg, #1b5e20, #2e7d32);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h2 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-        .header p {
-            font-size: 13px;
-            opacity: 0.9;
-        }
-        .content {
-            padding: 20px;
-        }
-        .sim-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin: 15px 0;
-        }
-        .sim-grid img {
-            width: 100%;
-            height: 45px;
-            object-fit: contain;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 5px;
-            background: #fff;
-        }
-        .input-group {
-            margin-bottom: 15px;
-            text-align: right;
-        }
-        .input-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: #444;
-        }
-        .input-group input {
-            width: 100%;
-            padding: 12px 15px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            text-align: center;
-            outline: none;
-            transition: border 0.3s;
-        }
-        .input-group input:focus {
-            border-color: #2e7d32;
-        }
-        .btn {
-            background-color: #2e7d32;
-            color: white;
-            border: none;
-            padding: 14px;
-            font-size: 16px;
-            font-weight: bold;
-            width: 100%;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #1b5e20;
-        }
-        
-        #loading-screen, #share-screen {
-            display: none;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #2e7d32;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .progress-bar-container {
-            width: 100%;
-            background-color: #e0e0e0;
-            border-radius: 6px;
-            margin: 15px 0;
-            overflow: hidden;
-            height: 22px;
-        }
-        .progress-bar {
-            width: 0%;
-            height: 100%;
-            background-color: #2e7d32;
-            color: white;
-            font-size: 12px;
-            line-height: 22px;
-            transition: width 0.4s ease;
-        }
-        .whatsapp-btn {
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 12px;
-            font-size: 16px;
-            border-radius: 6px;
-            margin-top: 15px;
-            font-weight: bold;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .instructions {
-            background: #f9f9f9;
-            border-right: 4px solid #2e7d32;
-            padding: 10px 15px;
-            margin-bottom: 15px;
-            text-align: right;
-            font-size: 13px;
-            color: #555;
-            border-radius: 4px;
-        }
-        .ad-box {
-            text-align: center;
-            margin: 15px auto;
-            overflow: hidden;
-        }
-        .footer-note {
-            font-size: 11px;
-            color: #777;
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Free Data Rewards 2026</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+:root{
+  --green:#0ca85c;
+  --green2:#087f48;
+  --light:#f5faf7;
+  --border:#e2e8e5;
+  --text:#17201b;
+  --muted:#69756e;
+  --wa:#25d366;
+  --shadow:0 10px 35px rgba(20,50,35,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#fff;
+  color:var(--text);
+  font-family:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq","Noto Nastaliq",serif;
+  overflow-x:hidden;
+}
+button,input{font:inherit}
+.page{width:min(100%,560px);margin:auto;padding:0 14px 25px}
+
+/* HEADER */
+.header{
+  height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #edf0ee;
+  background:#fff;
+}
+.brand{display:flex;align-items:center;gap:9px}
+.logo{
+  width:38px;height:38px;border-radius:11px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#12b968,#07874b);
+  color:#fff;font-family:Arial,sans-serif;font-size:20px;
+  box-shadow:0 6px 18px rgba(12,168,92,.2);
+}
+.brand strong{display:block;font:800 14px Arial,sans-serif;color:#18211c}
+.brand small{display:block;font:10px Arial,sans-serif;color:#8a948e;margin-top:3px}
+.online{
+  direction:ltr;font:10px Arial,sans-serif;
+  color:#6b766f;border:1px solid #e3e8e5;
+  border-radius:50px;padding:7px 10px;background:#fff;
+}
+.online i{display:inline-block;width:6px;height:6px;background:#19bd69;border-radius:50%;margin-right:5px}
+
+/* HERO */
+.hero{text-align:center;padding:28px 10px 18px}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  color:#07834a;background:#effaf4;border:1px solid #d4f1e1;
+  border-radius:50px;padding:4px 12px;
+  font-size:11px;margin-bottom:14px;
+}
+.badge i{width:6px;height:6px;background:#12b968;border-radius:50%}
+.hero h1{
+  font-size:34px;line-height:1.45;font-weight:700;
+  color:#101712;margin-bottom:6px;
+}
+.hero h1 span{color:var(--green)}
+.hero p{
+  color:#657169;font-size:14px;line-height:2;
+  max-width:430px;margin:auto;
+}
+
+/* ADS */
+.ad{
+  width:100%;display:flex;justify-content:center;align-items:center;
+  overflow:hidden;margin:12px 0;
+  min-height:50px;
+}
+.ad-box{
+  width:100%;border:1px solid #e8ecea;
+  background:#fafcfb;border-radius:13px;
+  padding:8px;display:flex;justify-content:center;
+  overflow:hidden;
+}
+.ad-label{
+  text-align:center;color:#a4ada8;font:8px Arial,sans-serif;
+  margin-bottom:3px;letter-spacing:.5px;
+}
+
+/* MAIN CARD */
+.card{
+  background:#fff;border:1px solid var(--border);
+  border-radius:22px;padding:18px;
+  box-shadow:var(--shadow);margin-top:12px;
+}
+.title-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:15px;
+}
+.title-row h2{font-size:19px;font-weight:700}
+.step{
+  direction:ltr;font:10px Arial,sans-serif;color:#0b9854;
+  background:#effaf4;border-radius:20px;padding:6px 9px;
+}
+
+/* NETWORKS */
+.networks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.network{
+  position:relative;border:1px solid #e5ebe7;
+  background:#fff;border-radius:17px;padding:13px;
+  text-align:center;cursor:pointer;transition:.2s;
+}
+.network:hover{border-color:#8ad8b1}
+.network.selected{
+  border:2px solid var(--green);
+  background:#f4fcf7;
+  box-shadow:0 7px 20px rgba(12,168,92,.09);
+}
+.network img{
+  width:62px;height:40px;object-fit:contain;
+  margin:2px auto 7px;display:block;
+}
+.network strong{font:700 13px Arial,sans-serif;display:block}
+.network small{font:10px Arial,sans-serif;color:#87918b}
+.tick{
+  display:none;position:absolute;top:8px;left:8px;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--green);color:#fff;
+  font:700 12px Arial,sans-serif;place-items:center;
+}
+.network.selected .tick{display:grid}
+
+/* FORM */
+.field{margin-top:17px}
+.field label{display:block;font-size:15px;font-weight:700;margin-bottom:7px}
+.input{
+  width:100%;height:54px;border:1px solid #dce4df;
+  border-radius:15px;background:#fbfdfc;
+  text-align:center;direction:ltr;outline:none;
+  font:18px Arial,sans-serif;color:#18211c;
+  letter-spacing:1px;
+}
+.input:focus{
+  border-color:#0ca85c;
+  box-shadow:0 0 0 4px rgba(12,168,92,.08);
+}
+.primary,.wa,.claim{
+  width:100%;height:53px;border:0;border-radius:15px;
+  cursor:pointer;font-weight:700;transition:.2s;margin-top:13px;
+}
+.primary{
+  background:linear-gradient(100deg,#0db765,#078a4d);
+  color:#fff;font-size:17px;
+  box-shadow:0 9px 22px rgba(12,168,92,.18);
+}
+.primary:active,.wa:active,.claim:active{transform:scale(.98)}
+.notice{
+  margin-top:13px;padding:10px 12px;
+  background:#f7faf8;border:1px solid #e6ece8;
+  border-radius:12px;color:#737e77;font-size:10px;line-height:2;
+}
+
+/* LOADING */
+#loading,#reward{display:none}
+.loading{text-align:center;padding:12px 0}
+.spinner{
+  width:48px;height:48px;border:3px solid #e5f3eb;
+  border-top-color:var(--green);border-radius:50%;
+  animation:spin .9s linear infinite;margin:8px auto 15px;
+}
+.loading h2{font-size:19px;margin-bottom:3px}
+.loading p{font-size:11px;color:#7b857f}
+.progress{
+  height:9px;background:#edf2ef;border-radius:20px;
+  overflow:hidden;margin-top:17px;
+}
+.progress i{
+  display:block;width:0;height:100%;
+  background:linear-gradient(90deg,#0db765,#44cf8a);
+  border-radius:20px;transition:.25s;
+}
+.progress-text{direction:ltr;font:10px Arial,sans-serif;color:#7d8881;margin-top:6px;text-align:left}
+
+/* REWARD */
+.success{
+  width:60px;height:60px;border-radius:20px;
+  background:#eafaf1;border:1px solid #ccefdc;
+  display:grid;place-items:center;margin:0 auto 12px;
+  color:#0aa257;font:bold 27px Arial,sans-serif;
+}
+.reward{text-align:center}
+.reward h2{font-size:23px;margin-bottom:4px}
+.reward p{font-size:12px;color:#6c776f;line-height:2}
+.offer{
+  margin:15px 0;padding:15px;border-radius:17px;
+  background:linear-gradient(135deg,#f0fbf5,#f8fcfa);
+  border:1px solid #d9f0e3;
+}
+.offer strong{display:block;font:800 23px Arial,sans-serif;color:#0a9c55}
+.offer span{font-size:11px;color:#758078}
+.task{
+  text-align:right;border-top:1px solid #edf0ee;
+  padding-top:15px;margin-top:10px;
+}
+.task h3{font-size:17px;margin-bottom:5px}
+.task p{font-size:11px;line-height:2;color:#6f7973}
+.task-list{margin-top:10px;display:grid;gap:7px}
+.task-item{
+  display:flex;align-items:center;justify-content:space-between;
+  border:1px solid #e4ebe7;border-radius:13px;
+  padding:10px 12px;background:#fcfdfc;
+}
+.task-item span{font-size:11px}
+.task-item b{
+  direction:ltr;font:10px Arial,sans-serif;
+  color:#a27a17;background:#fff7df;
+  border-radius:20px;padding:5px 8px;
+}
+.wa{background:var(--wa);color:#052414;font-size:16px}
+.claim{
+  display:none;background:#0ca85c;color:#fff;font-size:15px;
+}
+.share-note{
+  margin-top:9px;color:#909a94;font:9px Arial,sans-serif;
+  text-align:center;direction:ltr;
+}
+
+/* FOOTER */
+.footer{text-align:center;color:#89938d;font:9px Arial,sans-serif;padding:20px 4px}
+.toast{
+  position:fixed;left:50%;bottom:17px;
+  transform:translate(-50%,20px);opacity:0;
+  background:#17211b;color:#fff;border-radius:12px;
+  padding:10px 15px;font-size:11px;z-index:99;
+  transition:.25s;white-space:nowrap;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(max-width:370px){
+  .page{padding:0 9px 20px}
+  .hero h1{font-size:29px}
+  .card{padding:14px}
+}
+</style>
 </head>
+
 <body>
+<div class="page">
 
-    <div class="container">
-        <div class="header">
-            <h2>مفت انٹرنیٹ ڈیٹا پورٹل 2026</h2>
-            <p>تمام پاکستانی نیٹ ورکس کے لیے خصوصی امدادی پیکج</p>
-        </div>
+<header class="header">
+  <div class="brand">
+    <div class="logo">⚡</div>
+    <div><strong>DATA REWARDS</strong><small>Mobile Offer Portal</small></div>
+  </div>
+  <div class="online"><i></i> Online</div>
+</header>
 
-        <div class="content">
-            
-            <!-- STEP 1: Main Form -->
-            <div id="main-form">
-                <div class="instructions">
-                    <b>ہدایات:</b> حکومت پاکستان کی طرف سے تمام صارفین کو 50GB مفت انٹرنیٹ فراہم کیا جا رہا ہے۔ نیچے اپنا موبائل نمبر درج کریں۔
-                </div>
+<section class="hero">
+  <div class="badge"><i></i> خصوصی ڈیٹا ریوارڈ</div>
+  <h1>مفت ڈیٹا <span>آفر 2026</span></h1>
+  <p>اپنا نیٹ ورک منتخب کریں، موبائل نمبر درج کریں اور دستیاب ریوارڈ چیک کریں۔</p>
+</section>
 
-                <!-- Ad 1: 320x50 Banner -->
-                <div class="ad-box">
-                    <script>
-                      atOptions = {
-                        'key' : '1392cee0c552a48a051697cd17861f4e',
-                        'format' : 'iframe',
-                        'height' : 50,
-                        'width' : 320,
-                        'params' : {}
-                      };
-                    </script>
-                    <script src="https://www.highperformanceformat.com/1392cee0c552a48a051697cd17861f4e/invoke.js"></script>
-                </div>
+<!-- AD 1: ORIGINAL 320x50 -->
+<div class="ad">
+  <div>
+    <div class="ad-label">ADVERTISEMENT</div>
+    <div class="ad-box">
+      <script>
+      atOptions={
+        'key':'1392cee0c552a48a051697cd17861f4e',
+        'format':'iframe',
+        'height':50,
+        'width':320,
+        'params':{}
+      };
+      </script>
+      <script src="https://www.highperformanceformat.com/1392cee0c552a48a051697cd17861f4e/invoke.js"></script>
+    </div>
+  </div>
+</div>
 
-                <div class="sim-grid">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Jazz_Logo_2023.png" alt="Jazz">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Telenor_Logo.svg" alt="Telenor">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Zong_Logo.png" alt="Zong">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Ufone_Logo.png" alt="Ufone">
-                </div>
+<section class="card" id="form">
+  <div class="title-row">
+    <h2>اپنا نیٹ ورک منتخب کریں</h2>
+    <span class="step">STEP 01</span>
+  </div>
 
-                <div class="input-group">
-                    <label>موبائل نمبر درج کریں:</label>
-                    <input type="tel" id="phone-number" placeholder="03XXXXXXXXX" maxlength="11">
-                </div>
+  <div class="networks">
+    <button class="network" data-network="Jazz" onclick="selectNetwork(this)">
+      <span class="tick">✓</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Jazz_Logo_2023.png" alt="Jazz">
+      <strong>Jazz</strong><small>Mobile Network</small>
+    </button>
 
-                <!-- Ad 2: 728x90 Banner (Adjusted for mobile view) -->
-                <div class="ad-box">
-                    <script>
-                      atOptions = {
-                        'key' : '5773867c0da9de06c79a4e68996ef7ff',
-                        'format' : 'iframe',
-                        'height' : 90,
-                        'width' : 728,
-                        'params' : {}
-                      };
-                    </script>
-                    <script src="https://www.highperformanceformat.com/5773867c0da9de06c79a4e68996ef7ff/invoke.js"></script>
-                </div>
+    <button class="network" data-network="Zong" onclick="selectNetwork(this)">
+      <span class="tick">✓</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Zong_Logo.png" alt="Zong">
+      <strong>Zong</strong><small>Mobile Network</small>
+    </button>
 
-                <button class="btn" onclick="startVerification()">اہلیت چیک کریں</button>
-            </div>
+    <button class="network" data-network="Ufone" onclick="selectNetwork(this)">
+      <span class="tick">✓</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Ufone_Logo.png" alt="Ufone">
+      <strong>Ufone</strong><small>Mobile Network</small>
+    </button>
 
-            <!-- STEP 2: Loading Screen -->
-            <div id="loading-screen">
-                <div class="spinner"></div>
-                <h3 id="loading-title" style="font-size: 18px; color: #2e7d32; margin-bottom: 10px;">نمبر کی جانچ کی جا رہی ہے...</h3>
-                <p id="loading-desc" style="font-size: 13px; color: #666;">براہ کرم سکرین بند نہ کریں، سرور سے رابطہ کیا جا رہا ہے۔</p>
-                
-                <div class="progress-bar-container">
-                    <div id="main-progress" class="progress-bar">0%</div>
-                </div>
+    <button class="network" data-network="Telenor" onclick="selectNetwork(this)">
+      <span class="tick">✓</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Telenor_Logo.svg" alt="Telenor">
+      <strong>Telenor</strong><small>Mobile Network</small>
+    </button>
+  </div>
 
-                <!-- Ad 3: 300x250 Banner during load -->
-                <div class="ad-box">
-                    <script>
-                      atOptions = {
-                        'key' : '8f565f382681161c509a3c740c6953e8',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                      };
-                    </script>
-                    <script src="https://www.highperformanceformat.com/8f565f382681161c509a3c740c6953e8/invoke.js"></script>
-                </div>
-            </div>
+  <div class="field">
+    <label for="phone">اپنا موبائل نمبر درج کریں</label>
+    <input class="input" id="phone" type="tel" inputmode="numeric" maxlength="11" placeholder="03XXXXXXXXX">
+  </div>
 
-            <!-- STEP 3: Share Screen (Task System) -->
-            <div id="share-screen">
-                <h3 style="color: #2e7d32; margin-bottom: 10px; font-size: 18px;">مبارک ہو! آپ کا نمبر اہل ہے</h3>
-                <p style="font-size: 14px; margin-bottom: 15px;">اپنا 50GB ڈیٹا حاصل کرنے کے لیے نیچے دیے گئے ٹاسک کو مکمل کریں:</p>
-                
-                <div class="instructions" style="text-align: center; border-right: none; border-bottom: 3px solid #25D366;">
-                    اس لنک کو <b>5 واٹس ایپ گروپس</b> اور <b>10 دوستوں</b> کو شیئر کریں!
-                </div>
+  <button class="primary" onclick="startVerification()">ریوارڈ چیک کریں ←</button>
 
-                <div class="progress-bar-container">
-                    <div id="share-progress" class="progress-bar" style="width: 0%;">0% (0/5 Groups)</div>
-                </div>
+  <div class="notice">
+    دستیابی منتخب نیٹ ورک اور متعلقہ آفر کی شرائط پر منحصر ہے۔ یہ ایک promotional rewards page ہے اور کسی سرکاری ادارے کی نمائندگی نہیں کرتا۔
+  </div>
+</section>
 
-                <a href="whatsapp://send?text=فری 50GB انٹرنیٹ ڈیٹا حاصل کریں! تمام نیٹ ورکس (جاز، زونگ، ٹیلینور، یفون) کے لیے آفر آگئی ہے، ابھی اپنا نمبر چیک کریں: https://digital-website-online.github.io/independenceday/" class="whatsapp-btn" onclick="handleShareClick()">واٹس ایپ پر شیئر کریں</a>
+<!-- AD 2: ORIGINAL 728x90 -->
+<div class="ad">
+  <div>
+    <div class="ad-label">ADVERTISEMENT</div>
+    <div class="ad-box">
+      <script>
+      atOptions={
+        'key':'5773867c0da9de06c79a4e68996ef7ff',
+        'format':'iframe',
+        'height':90,
+        'width':728,
+        'params':{}
+      };
+      </script>
+      <script src="https://www.highperformanceformat.com/5773867c0da9de06c79a4e68996ef7ff/invoke.js"></script>
+    </div>
+  </div>
+</div>
 
-                <!-- Ad 4: Extra Container Ad -->
-                <div class="ad-box">
-                    <script async="async" data-cfasync="false" src="https://pl30812772.effectivecpmnetwork.com/e48332df7ac65ccf8132771c357887d9/invoke.js"></script>
-                    <div id="container-e48332df7ac65ccf8132771c357887d9"></div>
-                </div>
+<section class="card" id="loading">
+  <div class="loading">
+    <div class="spinner"></div>
+    <h2 id="loadingTitle">ریوارڈ چیک کیا جا رہا ہے...</h2>
+    <p>براہ کرم چند لمحے انتظار کریں۔</p>
+    <div class="progress"><i id="progressBar"></i></div>
+    <div class="progress-text" id="progressText">0%</div>
+  </div>
 
-                <button class="btn" id="claim-btn" style="display:none; margin-top: 15px; background-color: #ff9800;" onclick="finalClaim()">مفت ڈیٹا کلیم کریں</button>
-            </div>
+  <!-- AD 3: ORIGINAL 300x250 -->
+  <div class="ad">
+    <div>
+      <div class="ad-label">ADVERTISEMENT</div>
+      <div class="ad-box">
+        <script>
+        atOptions={
+          'key':'8f565f382681161c509a3c740c6953e8',
+          'format':'iframe',
+          'height':250,
+          'width':300,
+          'params':{}
+        };
+        </script>
+        <script src="https://www.highperformanceformat.com/8f565f382681161c509a3c740c6953e8/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div class="footer-note">
-                &copy; 2026 Telecommunication Digital Portal. All rights reserved.
-            </div>
+<section class="card" id="reward">
+  <div class="reward">
+    <div class="success">✓</div>
+    <h2>ریوارڈ دستیاب ہے</h2>
+    <p id="networkText">آپ کے منتخب کردہ نیٹ ورک کے لیے ریوارڈ فلو دستیاب ہے۔</p>
 
-        </div>
+    <div class="offer">
+      <strong>DATA REWARD</strong>
+      <span>Available promotional package</span>
     </div>
 
-    <script>
-        function startVerification() {
-            var phone = document.getElementById("phone-number").value;
-            if(phone.length < 11 || !phone.startsWith("03")) {
-                alert("براہ کرم درست 11 ہندسوں کا موبائل نمبر درج کریں (مثال: 03001234567)");
-                return;
-            }
+    <div class="task">
+      <h3>آفر شیئر کریں</h3>
+      <p>
+        <strong>مفت ڈیٹا حاصل کرنے کے لیے اس آفر کو WhatsApp پر 5 گروپس اور 10 لوگوں کے ساتھ شیئر کریں۔</strong>
+      </p>
 
-            document.getElementById("main-form").style.display = "none";
-            document.getElementById("loading-screen").style.display = "block";
+      <div class="task-list">
+        <div class="task-item">
+          <span>WhatsApp پر شیئر کریں</span>
+          <b id="shareStatus">PENDING</b>
+        </div>
+        <div class="task-item">
+          <span>Share flow</span>
+          <b id="shareProgress">0%</b>
+        </div>
+      </div>
 
-            var progressBar = document.getElementById("main-progress");
-            var loadingTitle = document.getElementById("loading-title");
-            var width = 0;
-            
-            var interval = setInterval(function() {
-                if (width >= 100) {
-                    clearInterval(interval);
-                    document.getElementById("loading-screen").style.display = "none";
-                    document.getElementById("share-screen").style.display = "block";
-                } else {
-                    width++;
-                    progressBar.style.width = width + '%';
-                    progressBar.innerHTML = width + '%';
+      <a class="wa" id="waBtn" href="#" onclick="openWhatsApp(event)">
+        💬 WhatsApp پر شیئر کریں
+      </a>
 
-                    if(width == 35) {
-                        loadingTitle.innerHTML = "ڈیٹا بیس میں تلاش جاری ہے...";
-                    } else if(width == 70) {
-                        loadingTitle.innerHTML = "مفت پیکج کیٹیگری تصدیق ہو رہی ہے...";
-                    } else if(width == 90) {
-                        loadingTitle.innerHTML = "تقریباً مکمل ہو گیا...";
-                    }
-                }
-            }, 75);
-        }
+      <button class="claim" id="claimBtn" onclick="completeClaim()">
+        ریوارڈ کا اگلا مرحلہ
+      </button>
 
-        var shareCount = 0;
-        function handleShareClick() {
-            shareCount++;
-            var shareBar = document.getElementById("share-progress");
-            
-            setTimeout(function() {
-                if(shareCount == 1) {
-                    shareBar.style.width = "40%";
-                    shareBar.innerHTML = "40% (2 گروپس میں شیئر ہو گیا)";
-                } else if(shareCount >= 2) {
-                    shareBar.style.width = "100%";
-                    shareBar.innerHTML = "100% مکمل!";
-                    document.getElementById("claim-btn").style.display = "block";
-                }
-            }, 1000);
-        }
+      <div class="share-note">
+        WhatsApp کھلنے کے بعد شیئر مکمل کریں اور واپس آ کر اگلا مرحلہ جاری رکھیں۔
+      </div>
+    </div>
+  </div>
 
-        function finalClaim() {
-            alert("مبارک ہو! آپ کا ڈیٹا پیکج کامیابی سے قطار میں لگ گیا ہے۔ 10 منٹ کے اندر آپ کو ایس ایم ایس موصول ہو جائے گا۔");
-        }
-    </script>
+  <!-- AD 4: ORIGINAL CONTAINER AD -->
+  <div class="ad">
+    <div style="width:100%">
+      <div class="ad-label">ADVERTISEMENT</div>
+      <div class="ad-box">
+        <script async data-cfasync="false"
+          src="https://pl30812772.effectivecpmnetwork.com/e48332df7ac65ccf8132771c357887d9/invoke.js"></script>
+        <div id="container-e48332df7ac65ccf8132771c357887d9"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<footer class="footer">
+  © 2026 Data Rewards · Promotional landing page
+</footer>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let selectedNetwork="";
+let shareOpened=false;
+
+function showToast(text){
+  const t=document.getElementById("toast");
+  t.textContent=text;
+  t.classList.add("show");
+  setTimeout(()=>t.classList.remove("show"),2400);
+}
+
+function selectNetwork(el){
+  document.querySelectorAll(".network").forEach(x=>x.classList.remove("selected"));
+  el.classList.add("selected");
+  selectedNetwork=el.dataset.network;
+}
+
+function startVerification(){
+  const phone=document.getElementById("phone").value.trim();
+
+  if(!selectedNetwork){
+    showToast("پہلے اپنا نیٹ ورک منتخب کریں");
+    return;
+  }
+
+  if(!/^03\d{9}$/.test(phone)){
+    showToast("درست 11 ہندسوں کا موبائل نمبر درج کریں");
+    return;
+  }
+
+  document.getElementById("form").style.display="none";
+  document.getElementById("loading").style.display="block";
+  document.getElementById("loading").scrollIntoView({behavior:"smooth",block:"start"});
+
+  let progress=0;
+  const bar=document.getElementById("progressBar");
+  const txt=document.getElementById("progressText");
+  const title=document.getElementById("loadingTitle");
+
+  const timer=setInterval(()=>{
+    progress+=2;
+    bar.style.width=progress+"%";
+    txt.textContent=progress+"%";
+
+    if(progress===30) title.textContent="نیٹ ورک معلومات دیکھی جا رہی ہیں...";
+    if(progress===60) title.textContent="ریوارڈ دستیابی چیک ہو رہی ہے...";
+    if(progress===85) title.textContent="تقریباً مکمل...";
+
+    if(progress>=100){
+      clearInterval(timer);
+      setTimeout(()=>{
+        document.getElementById("loading").style.display="none";
+        document.getElementById("reward").style.display="block";
+        document.getElementById("networkText").textContent=
+          selectedNetwork+" کے لیے promotional reward flow دستیاب ہے۔";
+        document.getElementById("reward").scrollIntoView({behavior:"smooth",block:"start"});
+      },300);
+    }
+  },35);
+}
+
+function openWhatsApp(e){
+  e.preventDefault();
+
+  const shareUrl=location.href;
+  const message=
+    "Free Data Rewards 2026 🎁\n"+
+    "اپنا نیٹ ورک منتخب کریں اور دستیاب ڈیٹا ریوارڈ چیک کریں:\n"+
+    shareUrl;
+
+  shareOpened=true;
+
+  window.open(
+    "https://wa.me/?text="+encodeURIComponent(message),
+    "_blank",
+    "noopener"
+  );
+
+  setTimeout(()=>{
+    document.getElementById("shareStatus").textContent="SHARE OPENED";
+    document.getElementById("shareProgress").textContent="100%";
+    document.getElementById("claimBtn").style.display="block";
+    showToast("WhatsApp کھول دیا گیا — واپس آ کر جاری رکھیں");
+  },1000);
+}
+
+function completeClaim(){
+  if(!shareOpened){
+    showToast("پہلے WhatsApp پر آفر شیئر کریں");
+    return;
+  }
+
+  showToast("Share step مکمل — اگلا verification/provider step درکار ہو سکتا ہے");
+}
+</script>
 </body>
 </html>
